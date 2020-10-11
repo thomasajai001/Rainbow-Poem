@@ -1,26 +1,17 @@
-import java.util.Scanner;
-
-class PalindromeCheck{
-
-    static boolean isPalindrome(String word){
-        int len = word.length();
-        char ch1, ch2;
-        for(int i=0;i<len;i++){
-            ch1 = word.charAt(i);
-            ch2 = word.charAt(len - i -1);
-            if(Character.toLowerCase(ch1)!=Character.toLowerCase(ch2))
-			return false;
-        }
-        return true;
-    }
-    public static void main(String[] args){
-        Scanner scan = new Scanner(System.in);
-        System.out.print("Enter a string: ");
-        String word = scan.nextLine();
-        scan.close();
-        if(isPalindrome(word))
-            System.out.println(word + " is a palindrome.");
-        else   
-            System.out.println(word + " is not a palindrome.");
-    }
-}
+class PalindromeExample{  
+ public static void main(String args[]){  
+  int r,sum=0,temp;    
+  int n=454;//It is the number variable to be checked for palindrome  
+  
+  temp=n;    
+  while(n>0){    
+   r=n%10;  //getting remainder  
+   sum=(sum*10)+r;    
+   n=n/10;    
+  }    
+  if(temp==sum)    
+   System.out.println("palindrome number ");    
+  else    
+   System.out.println("not palindrome");    
+}  
+}  
